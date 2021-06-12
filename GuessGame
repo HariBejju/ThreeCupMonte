@@ -1,0 +1,36 @@
+my_list=[' ','o',' ']
+
+
+def shuffle_list(my_list):
+    from random import shuffle
+    shuffle(my_list)
+    return my_list
+
+
+def user_guess():
+    guess=''
+    while guess not in ['0','1','2']:
+        guess=input("ENTER ANY NUMBER FROM 0 1 2 : ")
+    return int(guess)
+
+
+
+def check_guess(my_list,guess):
+    if my_list[guess]=='o':
+        print("YOUR GUESS IS RIGHT")
+        print(my_list)
+    else:
+        print("WHOOPS! WRONG GUESS")
+        print(my_list)
+
+my_list=[' ','o',' ']
+
+mixedup=shuffle_list(my_list)
+
+guess = user_guess()
+
+check_guess(mixedup,guess)
+
+
+
+
